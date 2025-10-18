@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid red;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+}
+.overlay{
+  background-color: #212121;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+}
+.overlay button{
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  border: 1px solid white;
+  background-color: #212121;
+  display: none;
+}
+.overlay button:hover{
+  background-color: transparent;
+  transition-duration: .3s;
+  background-color: #e0e0e0;
+  color: #000;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background-image: url("bubble.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  animation: rise 10s infinite ease-in;
+}
+
+/* Variasi ukuran, posisi, dan durasi */
+.bubble:nth-child(1) {
+  width: 40px; height: 40px;
+  left: 20%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  transform: translateY(0) scale(1) rotate(-45deg);
+}
+.bubble:nth-child(2) {
+  width: 60px; height: 60px;
+  left: 40%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  transform: translateY(0) scale(1) rotate(200deg);
+}
+.bubble:nth-child(3) {
+  width: 30px; height: 30px;
+  left: 60%;
+  animation-duration: 6s;
+  animation-delay: 4s;
+  transform: translateY(0) scale(1) rotate(25deg);
+}
+.bubble:nth-child(4) {
+  width: 80px; height: 80px;
+  left: 75%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+  transform: translateY(0) scale(1) rotate(80deg);
+}
+.bubble:nth-child(5) {
+  width: 50px; height: 50px;
+  left: 90%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+  transform: translateY(0) scale(1) rotate(90deg);
+}
+.bubble:nth-child(6) {
+  width: 50px;
+  height: 50px;
+  left: 3%;
+  animation-duration: 5s;
+  animation-delay: s;
+  transform: translateY(0) scale(1) rotate(170deg);
+}
+.card{
+  width: min(95%,500px);
+  padding: 1rem;
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 3px 5px 8px #000;
+  position: relative;
+}
+.card h2{
+  color: #0088FF;
+}
+.card p{
+margin-top: 10px;
+font: 1.2rem Arial,sans-serif;
+}
+
+footer {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  width: max-content;
+}
+#openingText{
+/*position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);*/
+  width: 100%;
+  animation: fill 2s ease forwards 5.4s;
+}
+#openingText .char-1 {
+  stroke-dasharray: 1376;
+  stroke-dashoffset: 1376;
+  animation: line-anim 2s ease forwards;
+}
+#openingText .char-2 {
+  stroke-dasharray: 1123;
+  stroke-dashoffset: 1123;
+  animation: line-anim 2s ease forwards .3s;
+}
+#openingText .char-3 {
+  stroke-dasharray: 1278;
+  stroke-dashoffset: 1278;
+  animation: line-anim 2s ease forwards .6s;
+}
+#openingText .char-4 {
+  stroke-dasharray: 1278;
+  stroke-dashoffset: 1278;
+  animation: line-anim 2s ease forwards .9s;
+}
+#openingText .char-5 {
+  stroke-dasharray: 1437;
+  stroke-dashoffset: 1437;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#openingText .char-6 {
+  stroke-dasharray: 1252;
+  stroke-dashoffset: 1252;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#openingText .char-7 {
+  stroke-dasharray: 693;
+  stroke-dashoffset: 693;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+#openingText .char-8 {
+  stroke-dasharray: 775;
+  stroke-dashoffset: 775;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+#openingText .char-9 {
+  stroke-dasharray: 1001;
+  stroke-dashoffset: 1001;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+#openingText .char-10 {
+  stroke-dasharray: 1207;
+  stroke-dashoffset: 1207;
+  animation: line-anim 2s ease forwards 2.7s;
+}
+#openingText .char-11 {
+  stroke-dasharray: 1265;
+  stroke-dashoffset: 1265;
+  animation: line-anim 2s ease forwards 3.0s;
+}
+#openingText .char-12 {
+  stroke-dasharray: 1123;
+  stroke-dashoffset: 1123;
+  animation: line-anim 2s ease forwards 3.3s;
+}
+#openingText .char-13 {
+  stroke-dasharray: 1437;
+  stroke-dashoffset: 1437;
+  animation: line-anim 2s ease forwards 3.6s;
+}
+#openingText .char-14 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-anim 2s ease forwards 3.9s;
+}
+#openingText .char-15 {
+  stroke-dasharray: 1032;
+  stroke-dashoffset: 1032;
+  animation: line-anim 2s ease forwards 4.2s;
+}
+#openingText .char-16 {
+  stroke-dasharray: 1114;
+  stroke-dashoffset: 1114;
+  animation: line-anim 2s ease forwards 4.5s;
+}
+#openingText .char-17 {
+  stroke-dasharray: 1114;
+  stroke-dashoffset: 1114;
+  animation: line-anim 2s ease forwards 4.8s;
+}
+#openingText .char-18 {
+  stroke-dasharray: 1032;
+  stroke-dashoffset: 1032;
+  animation: line-anim 2s ease forwards 5.1s;
+}
+
+
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: white;
+    
+  }
+}
+@keyframes disappear {
+  99%{
+    top: -100%;
+  }
+  100%{
+    display: none;
+  }
+}
+@keyframes rise {
+  0% {
+    opacity: .8;
+  }
+  100% {
+    transform: translateY(-110vh) scale(2) rotate(0deg);
+    opacity: 0;
+  }
+}
